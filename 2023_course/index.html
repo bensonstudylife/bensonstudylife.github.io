@@ -1,0 +1,2716 @@
+<!doctype html>
+<html style='font-size:16px !important'>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit; background-repeat: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+/* roboto-300 - latin */
+/* roboto-300italic - latin */
+/* roboto-regular - latin */
+/* roboto-italic - latin */
+/* roboto-500 - latin */
+/* roboto-500italic - latin */
+/* roboto-700 - latin */
+/* roboto-700italic - latin */
+/* roboto-900 - latin */
+/* roboto-900italic - latin */
+/* sorucecodepro-400 - latin */
+@font-face {
+     font-family: 'Source Code Pro';
+     font-style: normal;
+     font-weight: 400;
+     src: local('Source Code Pro'), local('SourceCodePro-Regular'),
+     url('file:///Users/bensonchiu/Library/Application%20Support/abnerworks.Typora/themes/gitbook/SourceCodePro-Regular.ttf') format('truetype');
+}@import "";
+
+/*by 16soundsofsilence, yes this code is an absolute mess*/
+
+:root {
+    --bg-color: white;
+    --side-bar-bg-color: #f5f7f9;
+    --control-text-color: #3b454e;
+    --primary-color: #15ac8e;
+    --primary-btn-border-color: #15ac8e;
+    --active-file-bg-color: #e6ecf1;
+    --active-file-text-color: inherit;
+    --active-file-border-color: #15ac8e;
+    --item-hover-text-color: #242a31;
+    --item-hover-bg-color: #f5f7f9;
+    --window-border: 1px solid #e6ecf1;
+    --select-text-font-color: white;
+    --select-text-bg-color: #11977d;
+
+    --md-char-color: #9daab6;
+    --heading-char-color: #9daab6;
+    --meta-content-color: #15ac8e;
+
+    --borders: #e6ecf1;
+    --table-border-color: #e6ecf1;
+    --boxes: #f5f7f9;
+    --boxes-darker: #d8e0e7;
+    --boxes-darker2: #bac2c9;
+    --boxes-darkest: #9daab6;
+    --drag-placeholder-color: #d8e0e7;
+
+    --text-color: #3b454e;
+    --heading-text-color: #242a31;
+    --light-text-color: #9daab6;
+    --light-text-color-darker: #74818d;
+    --codeboxes: #183055;
+    --codeboxes-lighter: #1c375f;
+    --rawblock-edit-panel-bd: transparent;
+
+    --primary-color-darkest: #083d33;
+    --primary-color-darker2: #0d5748;
+    --primary-color-darker: #11977d;
+    --focus-ring-color: #15ac8e;
+
+    --danger-color: rgb(255, 70, 66);
+
+    --node-fill: #ececff;
+    --node-border: #ccccff;
+    --cluster-fill: #ffffde;
+    --cluster-border: #aaaa33;
+    --note-fill: #fff5ad;
+    --note-border: #aaaa33;
+
+    /*****************************/
+
+    --font-family: "IBM Plex Sans","Roboto", "Noto Sans TC", sans-serif;
+    --code-font-family: "Source Code Pro";
+    --monospace: "Source Code Pro";
+}
+
+html,
+.form-control,
+.modal {
+    font-size: 16px;
+}
+
+body {
+    background: var(--bg-color);
+    font-family: var(--font-family);
+    font-weight: 400;
+    color: #3b454e;
+    line-height: 1.6rem;
+    height: 100%;
+}
+
+#write {
+    font-size: 0.95rem;
+    max-width: 850px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: 30px;
+    padding-bottom: 100px;
+    position: static;
+    width: 100%;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none !important;
+    transition-duration: 0.2s;
+    transition-property: color;
+}
+
+a:hover {
+    color: var(--primary-color-darker);
+}
+
+mark a,
+mark .md-content.md-url {
+    color: var(--primary-color-darker2);
+}
+
+mark a:hover {
+    color: var(--primary-color-darkest);
+}
+
+.ty-preferences a {
+    color: var(--primary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    color: var(--heading-text-color);
+    cursor: text;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.2rem;
+    border-bottom: solid 1px var(--borders);
+}
+
+h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.375rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h5 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h6 {
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#write > h1.md-focus:before {
+    content: "h1";
+    top: 1.15rem;
+    left: -1.75rem;
+}
+
+#write > h2.md-focus:before {
+    content: "h2";
+    top: 0.75rem;
+    left: -1.75rem;
+}
+
+#write > h3.md-focus:before {
+    content: "h3";
+    top: 0.575rem;
+    left: -1.75rem;
+}
+
+#write > h4.md-focus:before {
+    content: "h4";
+    top: 0.4rem;
+    left: -1.75rem;
+}
+
+#write > h5.md-focus:before {
+    content: "h5";
+    top: 0.25rem;
+    left: -1.75rem;
+}
+
+#write > h6.md-focus:before {
+    content: "h6";
+    top: 0.25rem;
+    left: -1.75rem;
+}
+
+#write > h1.md-focus:before,
+#write > h2.md-focus:before,
+#write > h3.md-focus:before,
+#write > h4.md-focus:before,
+#write > h5.md-focus:before,
+#write > h6.md-focus:before {
+    color: var(--light-text-color);
+    border: none;
+    position: absolute;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0px;
+    line-height: 1;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child,
+blockquote h1,
+blockquote h2,
+blockquote h3,
+blockquote h4,
+blockquote h5,
+blockquote h6 {
+    margin-top: 0rem;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl {
+    margin: 0.5rem 0rem 1.5rem 0rem;
+}
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+
+hr {
+    height: 1px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: var(--borders);
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+.md-blockmeta {
+    color: var(--md-char-color);
+}
+
+mark {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.2rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+/*BLOCKQUOTE*/
+
+blockquote {
+    width: 100%;
+    background-color: var(--boxes);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 0.3rem;
+    padding: 1rem;
+    border-right: 4px solid var(--boxes); /* removes arc with tiny blue color from top-right and bottom-right corner */
+}
+
+blockquote blockquote {
+    padding-right: 0;
+}
+
+/*TABLE*/
+
+table {
+    font-size: 0.875rem;
+    padding: 0;
+    margin: 1.5rem 0;
+    word-break: initial;
+}
+
+table tr {
+    border-top: 1px solid var(--borders);
+    border-bottom: 1px solid var(--borders);
+    margin: 0;
+    padding: 0;
+}
+
+table tr.md-end-block {
+    border-top: none;
+}
+
+table tbody tr:last-child {
+    border-bottom: none;
+}
+
+table tr th {
+    font-weight: bold;
+    border: none;
+    border-bottom: solid 2px var(--borders);
+    margin: 0;
+    padding: 10px 16px;
+    transition-duration: 0.3s;
+    transition-property: background-color;
+}
+
+table tr td {
+    border: none;
+    margin: 0;
+    padding: 10px 16px;
+    transition-duration: 0.3s;
+    transition-property: background-color;
+}
+
+#write table tr td:hover,
+#write table tr th:hover {
+    background-color: var(--boxes);
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+/*OTHER TABLE THINGS*/
+
+.ty-table-edit {
+    background-color: var(--boxes);
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    box-shadow: none;
+    transform: translateY(2.5rem);
+    transition-duration: 0.3s;
+    transition-property: opacity;
+}
+
+.ty-table-edit + .md-table {
+    margin-top: 3rem;
+}
+
+.ty-table-edit:active,
+.ty-table-edit:focus {
+    box-shadow: none;
+}
+
+.popover,
+.popover:active,
+.popover:focus {
+    border: solid 1px var(--borders);
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    border-radius: 0.3rem;
+}
+
+.popover .arrow {
+    border-bottom-color: var(--borders);
+}
+
+.md-grid-board a {
+    background-color: transparent;
+    border-color: var(--borders);
+    border-radius: 2px;
+}
+
+.md-grid-board .md-grid-ext {
+    background-color: var(--borders);
+    border-radius: 2px;
+}
+
+.md-grid-board tr[row="1"] .md-grid-ext {
+    background: none;
+    border-radius: 6px;
+}
+
+.md-grid-board tr[row="1"] .md-grid-ext a {
+    background-color: var(--boxes-darker2);
+    border-color: var(--boxes-darker2);
+}
+
+.md-grid-board tr[row="1"] td {
+    background-color: var(--bg-color);
+    border-color: var(--borders);
+}
+
+.md-grid-board a.md-active,
+.md-grid-board a:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.md-grid-board tr[row="1"] a.md-active,
+.md-grid-board tr[row="1"] a:hover {
+    background-color: var(--primary-color-darker);
+    border-color: var(--primary-color-darker);
+}
+
+#md-grid-width,
+#md-grid-height {
+    border-radius: 0.3rem;
+    border-color: var(--borders);
+    transition-duration: 0.3s;
+    transition-property: border-color;
+}
+
+#md-grid-width:focus,
+#md-grid-height:focus {
+    border-radius: 0.3rem;
+    border-color: var(--primary-color);
+}
+
+/*CODE*/
+
+.CodeMirror {
+    padding: 1rem;
+    font-family: var(--code-font-family);
+}
+
+.cm-s-inner .CodeMirror-gutters {
+    background-color: none;
+    border-right: none;
+    border-radius: 0px;
+    color: white;
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+    border-left: solid 2px var(--light-text-color-darker);
+}
+
+.CodeMirror.cm-s-typora-default .CodeMirror-activeline-background {
+    background-color: var(--codeboxes-lighter);
+}
+
+.cm-s-inner .CodeMirror-cursor {
+    color: white;
+    border-left: solid 1px white;
+}
+
+.CodeMirror-linenumber {
+    color: var(--bg-color);
+    opacity: 0.6;
+}
+
+.cm-s-inner .CodeMirror-line::selection,
+.cm-s-inner .CodeMirror-line::-moz-selection,
+.cm-s-inner .CodeMirror-line > span::selection,
+.cm-s-inner .CodeMirror-line > span::-moz-selection,
+.cm-s-inner .CodeMirror-line > span > span::selection,
+.cm-s-inner .CodeMirror-line > span > span::-moz-selection {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cm-error {
+    color: var(--danger-color);
+}
+
+.cm-s-inner span.cm-comment,
+.cm-s-typora-default span.cm-comment,
+.cm-s-typora-default span.cm-code {
+    color: #9daab6;
+}
+
+.cm-s-inner span.cm-string,
+.cm-s-inner span.cm-string-2 {
+    color: #71a7ff;
+}
+
+.cm-s-inner span.cm-number {
+    color: #ff9d3d;
+}
+
+.cm-s-inner span.cm-variable,
+.cm-s-inner span.cm-variable-2 {
+    color: white;
+}
+
+.cm-s-inner span.cm-def {
+    color: white;
+}
+
+.cm-s-inner span.cm-operator {
+    color: #ff9d3d;
+}
+
+.cm-s-inner span.cm-keyword {
+    color: #61e3a5;
+}
+
+.cm-s-inner span.cm-atom {
+    color: #bd93f9;
+}
+
+.cm-s-inner span.cm-meta {
+    color: #f8f8f2;
+}
+
+.cm-s-inner span.cm-link,
+.cm-s-typora-default .cm-link {
+    color: var(--primary-color);
+}
+
+.cm-s-inner span.cm-tag,
+.cm-s-inner .cm-header {
+    color: #b4f6d6;
+}
+
+.cm-s-inner span.cm-attribute {
+    color: #ff9d3d;
+}
+
+.cm-s-inner span.cm-qualifier,
+.cm-s-inner span.cm-type,
+.cm-s-inner span.cm-variable-3 {
+    color: #82ee9d;
+}
+
+.cm-s-inner span.cm-property {
+    color: #ffd6ad;
+}
+
+.cm-s-inner span.cm-builtin {
+    color: #8ffaaa;
+}
+
+.md-fences.md-focus .cm-s-inner .CodeMirror-activeline-background {
+    background: none;
+}
+
+.cm-s-inner .CodeMirror-selected,
+.cm-s-inner .CodeMirror-selectedtext {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cm-s-inner .cm-search-hit.CodeMirror-selected, .cm-s-inner .cm-search-hit.CodeMirror-selectedtext {
+    background: var(--select-text-bg-color)!important;
+} /* removes black background from code search selected */
+
+.cm-s-typora-default .cm-header,
+.cm-s-typora-default .cm-property {
+    color: white;
+    font-weight: 400;
+}
+
+.md-fences .code-tooltip {
+    box-shadow: rgba(116, 129, 141, 0.08) 0px 2px 6px 0px;
+    border: solid 1px var(--borders);
+    border-radius: 0.3rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    width: 15rem;
+    height: 2.5rem;
+    bottom: -3rem;
+    padding: 0.1875rem;
+}
+
+.md-fences .code-tooltip .ty-input {
+    border: solid 1px var(--borders);
+    height: 2rem;
+    line-height: 2rem;
+    margin: 0rem;
+    padding-left: 0.5rem !important;
+    text-align: left;
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: var(--font-family);
+    transition-duration: 0.3s;
+    transition-property: border;
+}
+
+.md-fences .code-tooltip .ty-input:focus {
+    border-color: var(--primary-color);
+}
+
+.html-for-mac .ty-cm-lang-input:empty:after {
+    left: 0.5rem;
+}
+
+.autoComplt-list li,
+.fences-auto-suggest li {
+    font-weight: 500;
+    transition-duration: 0.3s;
+    transition-property: background-color, color;
+}
+
+.autoComplt-list li.active,
+.fences-auto-suggest li:hover {
+    background-color: var(--boxes);
+    color: var(--primary-color);
+}
+
+.md-fences,
+tt {
+    border-radius: 0.3rem;
+    color: #ffffff;
+    padding: 1.5rem;
+    font-size: 0.8rem;
+}
+
+code {
+    padding: 0.2rem 0.4rem;
+    background-color: var(--borders);
+    font-size: 0.9rem;
+    border-radius: 0.2rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+.md-fences .CodeMirror div.CodeMirror-cursor,
+#typora-source div.CodeMirror-cursor {
+    border-left: solid 1px white;
+}
+
+.md-fences {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 8px;
+    padding-bottom: 6px;
+    background-color: var(--codeboxes);
+}
+
+#typora-source {
+    background-color: var(--codeboxes);
+    color: white;
+    font-size: 0.9rem;
+}
+
+/*DIAGRAMS*/
+
+.md-diagram-panel {
+    color: var(--text-color);
+    border: solid 1px var(--borders);
+    border-radius: 0.3rem;
+}
+
+.md-diagram-panel text,
+.md-diagram-panel .label {
+    color: var(--text-color);
+}
+
+.md-diagram-panel text {
+    fill: var(--text-color) !important /*required*/;
+}
+
+.md-diagram-panel-error {
+    color: var(--danger-color);
+}
+
+/*CHECKBOXES*/
+
+.md-task-list-item > input:before,
+input[type="checkbox"]:before {
+    border-radius: 0.2rem;
+    margin-top: -0.08rem;
+    margin-left: -0.1rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--borders);
+    content: " ";
+    display: block;
+    transition-duration: 0.3s;
+    transition-property: background-color;
+}
+
+.md-task-list-item:hover > input:before,
+input[type="checkbox"]:hover:before {
+    background-color: var(--boxes-darker);
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before,
+input[type="checkbox"]:checked:before {
+    background-color: var(--primary-color);
+}
+
+.md-task-list-item:hover > input:checked:before,
+.md-task-list-item:hover > input[checked]:before,
+input[type="checkbox"]:hover:checked:before {
+    background-color: var(--primary-color-darker);
+}
+
+.md-task-list-item > input:after,
+.md-task-list-item > input:after,
+input[type="checkbox"]:after {
+    transform: rotate(-45deg);
+    position: absolute;
+    border: 2px solid white;
+    border-top: 0;
+    border-right: 0;
+    top: 0.16rem;
+    left: 0.1rem;
+    width: 0.6rem;
+    height: 0.375rem;
+    content: " ";
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+}
+
+.md-task-list-item > input:checked:after,
+.md-task-list-item > input[checked]:after,
+input[type="checkbox"]:checked:after {
+    opacity: 1;
+}
+
+.ty-preferences input[type="checkbox"]:before {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.ty-preferences input[type="checkbox"]:after {
+    width: 0.5rem;
+    height: 0.32rem;
+    top: 0.19rem;
+    left: 0.14rem;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+#write pre.md-meta-block {
+    padding: 1rem;
+    line-height: 1.45;
+    background-color: var(--boxes);
+    border: 0;
+    border-radius: 0.3rem;
+    color: var(--text-color);
+    border-left: solid 4px var(--boxes-darkest);
+}
+
+#write pre.md-meta-block:empty:before {
+    color: var(--light-text-color);
+}
+
+.md-image > .md-meta {
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: var(--md-char-color);
+    opacity: 1;
+}
+
+/*TOC*/
+
+.md-toc {
+    margin: 1.5rem 0rem;
+}
+
+.md-toc:focus .md-toc-content {
+    border: none;
+}
+
+#write div.md-toc-tooltip {
+    background-color: var(--boxes);
+    line-height: 1.6rem;
+    padding: 0.3rem 0.75rem;
+    border-top: none;
+    border-radius: 0.3rem;
+}
+
+.md-toc.md-focus {
+    margin-top: 4.5rem;
+}
+
+#write div.md-toc-tooltip + .md-toc-content {
+    padding-top: 1rem;
+}
+
+.md-delete-toc {
+    padding: 0px;
+}
+
+/*MATH*/
+
+.md-rawblock-container {
+    padding: 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.md-rawblock:hover .md-rawblock-container {
+    background-color: var(--boxes);
+}
+
+.md-rawblock:active .md-rawblock-container {
+    background-color: var(--boxes-darker);
+}
+
+.MathJax_SVG:focus {
+    outline: none;
+}
+
+.md-rawblock-panel,
+.md-rawblock-control:not(.md-rawblock-tooltip) {
+    border-radius: 0.3rem;
+    background-color: var(--boxes);
+}
+
+.md-rawblock-panel .code-tooltip {
+    box-shadow: none;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+
+.md-rawblock-panel .CodeMirror-linenumber {
+    color: var(--light-text-color);
+    opacity: 1;
+}
+
+.md-rawblock-panel .CodeMirror div.CodeMirror-cursor {
+    border-left: solid 1px var(--text-color);
+}
+
+.md-mathblock-panel .md-mathjax-preview,
+.mathjax-candidate {
+    border-top: solid 1px var(--borders);
+}
+
+.md-rawblock-after,
+.md-rawblock-before {
+    cursor: default;
+    color: var(--light-text-color);
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.md-rawblock-tooltip-name {
+    font-size: 13px;
+    color: var(--light-text-color);
+    opacity: 1;
+}
+
+.md-rawblock-on-edit > .md-rawblock-tooltip {
+    padding-right: 0px;
+}
+
+.md-rawblock-input span.cm-tag {
+    color: #0bb6ad;
+}
+
+.md-rawblock-input span.cm-atom,
+.md-inline-math script {
+    color: #b61ed4;
+}
+
+.md-rawblock-input span.cm-number {
+    color: #ec7200;
+}
+
+.md-rawblock-input span.cm-keyword {
+    color: #156db6;
+}
+
+.md-mathblock-input span.cm-bracket {
+    color: var(--light-text-color);
+}
+
+#math-inline-preview.code-tooltip {
+    border-radius: 0.3rem;
+    background-color: var(--bg-color);
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    color: var(--text-color);
+    opacity: 1;
+}
+
+#math-inline-preview.code-tooltip .code-tooltip-content {
+    border: solid 1px var(--borders);
+}
+
+#math-inline-preview.code-tooltip .md-arrow:after {
+    background-color: var(--bg-color);
+    border: solid 1px var(--borders);
+    box-shadow: none;
+}
+
+/*FOOTER*/
+
+footer.ty-footer {
+    border: none;
+}
+
+.footer-item {
+    opacity: 1 !important;
+    color: var(--light-text-color);
+    transition: 0.3s;
+}
+
+.footer-item:hover {
+    color: var(--light-text-color-darker) !important;
+}
+
+#outline-btn:hover {
+    color: var(--light-text-color-darker) !important;
+}
+
+/*SIDEBAR*/
+
+#typora-sidebar {
+    border-right: solid 1px var(--borders);
+}
+
+.info-panel-tab {
+    opacity: 1;
+}
+
+.sidebar-tab {
+    text-transform: capitalize;
+    color: var(--light-text-color);
+}
+
+.info-panel-tab-border {
+    color: var(--primary-color);
+    border-radius: 2px;
+}
+
+#ty-sidebar-search-back-btn {
+    margin: auto;
+}
+
+.ty-show-outline-filter #file-library-search,
+.ty-show-search #file-library-search {
+    height: 4rem;
+}
+
+#file-library-search-input {
+    height: 2rem;
+}
+
+#file-library-search-panel input {
+    margin-top: 8px !important;
+}
+
+.ty-sidebar-search-panel .searchpanel-search-option-btn,
+#ty-sidebar-search-tabs .searchpanel-search-option-btn {
+    top: 15px;
+}
+
+#typora-sidebar #filesearch-case-ion-btn,
+#typora-sidebar #filesearch-word-ion-btn {
+    background: none;
+    margin-top: 0.45rem;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+#typora-sidebar #filesearch-case-ion-btn:hover,
+#typora-sidebar #filesearch-word-ion-btn:hover {
+    color: var(--primary-color);
+}
+
+/*sidebar loading*/
+
+#typora-sidebar #sidebar-loading-template {
+    padding: 0px;
+}
+
+#typora-sidebar #sidebar-loading-template .typora-search-spinner {
+    opacity: 1;
+    color: var(--light-text-color-darker);
+}
+
+#typora-sidebar #sidebar-loading-template .typora-quick-open-info {
+    color: var(--light-text-color-darker);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/*sidebar outline*/
+
+#close-outline-filter-btn {
+    top: 15px;
+    opacity: 1;
+    color: var(--light-text-color) !important;
+}
+
+#close-outline-filter-btn:hover {
+    color: var(--primary-color) !important;
+    background-color: transparent !important;
+}
+
+#close-outline-filter-btn:active {
+    background-color: transparent !important;
+}
+
+#outline-content {
+    padding-right: 0px;
+    line-height: 1rem;
+}
+
+.outline-item {
+    display: flex;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.outline-item .outline-label {
+    display: block;
+    width: 100%;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    border-right: solid 2px transparent;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--light-text-color-darker);
+}
+
+.outline-item:hover {
+    background: none;
+}
+
+.outline-item:hover .outline-label {
+    color: var(--primary-color);
+}
+
+.outline-label:hover {
+    text-decoration: none;
+}
+
+.outline-active.outline-label {
+    border-right: solid 2px var(--primary-color);
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.outline-expander {
+    padding-top: 0.4rem;
+    padding-right: 0.5rem;
+}
+
+#toc-dropmenu .outline-label {
+    line-height: 1rem;
+}
+
+#toc .outline-title {
+    margin-top: 9px;
+    font-size: 1rem;
+    font-weight: 500;
+    user-select: none;
+}
+
+#pin-outline-btn {
+    padding: 14px 18px 0px 0px;
+}
+
+/*sidebar file-list and search results*/
+
+#file-library-list[data-state="complete"] #sidebar-loading-template {
+    padding: 0rem;
+}
+
+#typora-sidebar .file-list-item,
+.ty-search-item {
+    border: none;
+    padding: 1rem;
+}
+
+body.html-for-mac #typora-sidebar .file-list-item,
+body.html-for-mac .ty-search-item {
+    transition-duration: 0.3s !important;
+    transition-property: background-color, border, color, height !important;
+}
+
+#typora-sidebar .file-list-item:hover,
+.ty-search-item:hover {
+    background: var(--borders);
+}
+
+#typora-sidebar .ty-search-item-line {
+    font-family: var(--font-family);
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    margin-left: 24px;
+}
+
+body.html-for-mac #typora-sidebar .ty-search-item-line {
+    transition-duration: 0.2s;
+}
+
+#typora-sidebar .ty-search-item-line * {
+    opacity: 1;
+}
+
+#typora-sidebar .ty-search-item .ty-search-item-line:hover,
+#typora-sidebar .ty-search-item-line.active {
+    background-color: var(--select-text-bg-color);
+    color: white;
+} /* makes easier identifying which searched item is active in the sidebar */
+
+#typora-sidebar .file-list-item-file-name {
+    font-weight: 800;
+    font-size: 0.9rem;
+    margin-bottom: 0rem;
+    line-height: 1.8rem;
+    float: right;
+}
+
+#typora-sidebar .file-list-item-file-ext-part {
+    font-weight: 800;
+    opacity: 0.5;
+}
+
+#typora-sidebar .file-list-item-parent-loc,
+#typora-sidebar .file-list-item-time {
+    font-family: var(--font-family);
+    font-weight: 400;
+    opacity: 0.5;
+    display: block;
+}
+
+#typora-sidebar .file-list-item-summary {
+    float: left;
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+#typora-sidebar input.file-list-item-file-name {
+    margin: 0.5rem 0rem 0.5rem 0.7rem;
+    padding: 0.4rem !important;
+    line-height: 1rem;
+    float: right;
+    border-radius: 0.3rem;
+    font-weight: 500;
+    background-color: white !important;
+}
+
+#typora-sidebar .file-list-item-count {
+    font-size: 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 0.2rem;
+    min-width: 1.25rem;
+    height: 1.25rem;
+    text-align: center;
+    line-height: 1.25rem;
+    position: relative;
+    top: 0.3rem;
+}
+
+#typora-sidebar .file-list-item.file-library-file-node {
+    border: none;
+}
+
+#typora-sidebar .file-tree-node.active .file-node-background,
+#typora-sidebar .file-list-item.active,
+#typora-sidebar .ty-search-item.active {
+    background-color: white;
+    outline: 1px solid var(--borders);
+    border: none;
+    color: var(--primary-color) !important;
+}
+
+#typora-sidebar .file-tree-node.active .file-node-content {
+    color: var(--primary-color) !important;
+}
+
+#typora-sidebar .file-tree-node {
+    padding: 0rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-left: 0.8rem;
+}
+
+#typora-sidebar .file-tree-node .file-node-content {
+    padding: 0rem;
+    line-height: 2.2rem;
+    height: 2.2rem;
+    background: none;
+    margin-bottom: 0px;
+}
+
+#typora-sidebar .file-tree-node .file-node-background {
+    padding: 0rem;
+    height: 2.2rem;
+}
+
+#typora-sidebar .file-tree-node .file-node-icon {
+    margin-right: 0.5rem;
+}
+
+#typora-sidebar .file-tree-node .file-node-icon.fa-file-text-o {
+    margin-top: 0.33rem;
+}
+
+#typora-sidebar .file-tree-node .file-node-icon.fa-folder {
+    margin-top: 0.36rem;
+}
+
+#typora-sidebar .file-tree-node .fa-caret-down,
+#typora-sidebar .file-tree-node .fa-caret-right {
+    position: relative;
+    top: 5px;
+}
+
+#typora-sidebar .file-tree-node .file-tree-rename-input {
+    height: 2.2rem;
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0rem;
+    padding-left: 0rem;
+}
+
+#typora-sidebar .ty-search-item-collapse-icon {
+    top: 9px;
+}
+
+/*no left border*/
+#typora-sidebar .file-tree-node.active > .file-node-background {
+    border: none;
+}
+
+/*no dotted highlighting*/
+.file-library-node:not(.file-node-root):focus > .file-node-content {
+    outline: none;
+}
+
+#typora-sidebar #sidebar-files-menu {
+    border: solid 1px var(--borders);
+    border-radius: 0.3rem;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+}
+
+#typora-sidebar #ty-sidebar-footer {
+    background-color: var(--bg-color);
+    border-top: solid 1px var(--borders);
+    font-weight: 500;
+}
+
+#typora-sidebar #ty-sidebar-footer li {
+    transition-duration: 0.2s;
+    transition-property: background-color, color;
+}
+
+#typora-sidebar
+    #ty-sidebar-footer
+    li:not(.file-sort-item):not(:first-child):not(.empty-menu-group):not(.folder-menu-group):hover {
+    color: var(--primary-color);
+    background-color: var(--boxes);
+}
+
+#typora-sidebar
+    #ty-sidebar-footer
+    .file-action-item.file-sort-item
+    > span:first-of-type {
+    line-height: 2rem;
+}
+
+/*cursor*/
+.file-node-content:hover {
+    cursor: pointer;
+}
+
+body.html-for-mac
+    .file-tree-node:not(.file-node-root):not(.file-node-expanded)
+    .file-node-background {
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.file-tree-node:not(.file-node-root):not(.file-node-expanded):hover
+    .file-node-background {
+    background-color: var(--borders);
+}
+
+#typora-sidebar .sidebar-footer-item {
+    transition-duration: 0.2s;
+    transition-property: background-color, color;
+    font-weight: 700;
+}
+
+#typora-sidebar .sidebar-footer-item:hover {
+    color: var(--primary-color);
+    background-color: var(--boxes);
+}
+
+#typora-quick-open {
+    background-color: white;
+    border: 1px solid var(--borders);
+    border-radius: 0.3rem;
+    padding: 0rem;
+    box-shadow: rgba(116, 129, 141, 0.15) 0px 3px 16px 0px;
+    overflow: hidden;
+}
+
+#typora-quick-open-input {
+    margin-right: 20px;
+}
+
+#typora-quick-open-input .input {
+    box-shadow: none !important /*required*/;
+    border: none !important /*required*/;
+    font-weight: 400 !important /*required*/;
+    margin: 0.5rem;
+    margin-left: 0.8rem;
+}
+
+.typora-quick-open-item {
+    background-color: white;
+    border: none;
+    font-weight: 500;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.typora-quick-open-item:hover {
+    background-color: var(--boxes);
+    color: var(--primary-color);
+}
+
+.typora-quick-open-item.active {
+    background-color: var(--boxes);
+    border: none;
+}
+
+.typora-quick-open-item-path {
+    opacity: 1;
+    color: var(--light-text-color);
+}
+
+.typora-quick-open-item:hover .typora-quick-open-item-path {
+    opacity: 0.7;
+    color: var(--primary-color);
+}
+
+.ty-quick-open-category-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    opacity: 1;
+    color: var(--light-text-color);
+    line-height: 32px;
+    padding-top: 6px;
+    height: 32px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+.md-lang {
+    color: var(--primary-color);
+}
+
+/*NOTIFICATION*/
+
+#md-notification {
+    border-bottom: solid 1px var(--borders);
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+}
+
+#md-notifcation .btn {
+    border: 0;
+}
+
+/*PREFERENCES*/
+
+.ty-preferences {
+    font-family: var(--font-family);
+}
+
+.ty-preferences .window-header {
+    justify-content: space-between;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    border-bottom: solid 1px var(--borders);
+}
+
+.ty-preferences .window-header-content {
+    background-color: white;
+    margin: 0rem;
+}
+
+.ty-preferences .window-header h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0rem;
+    margin-left: 1rem;
+}
+
+.unibody-window .ty-preferences .window-header h2 {
+    margin-left: 1rem !important;
+}
+
+.ty-preferences .window-header-back {
+    margin-left: 1.2rem;
+}
+
+.ty-preferences .window-header-back .icon {
+    border-right: none;
+}
+
+/*preferences sidebar*/
+.ty-preferences .window-content {
+    background-color: white;
+}
+
+.ty-preferences .nav-group-item {
+    color: var(--text-color);
+    height: 2.5rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+    padding: 0px 0px 0px 2rem;
+    font-size: 1rem;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.ty-preferences .nav-group-item:hover {
+    background-color: var(--borders);
+    border-radius: 0px;
+}
+
+.ty-preferences .nav-group-item.active {
+    border-radius: 0rem;
+    border: none;
+    outline: 1px solid var(--borders);
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.ty-preferences .pane-sm {
+    background: var(--boxes);
+    flex-basis: 240px;
+    flex-grow: 0;
+    justify-content: center;
+    border-right: 1px solid var(--borders);
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.ty-preferences .pane-sm .list-group {
+    width: 100%;
+    max-width: 30rem;
+}
+
+.ty-preferences .list-group-header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ty-preferences .list-group-header div {
+    width: 100%;
+    margin-right: 18px;
+    margin-left: 18px;
+}
+
+.ty-preferences .pane-sm .search-input {
+    margin: 0rem !important;
+    width: 100%;
+    font-size: 1rem !important;
+    height: 2.75rem;
+}
+
+.ty-preferences .pane-sm .search-input:active,
+.ty-preferences .pane-sm .search-input:focus {
+    border: solid 1px var(--primary-color) !important;
+    outline: none;
+}
+
+/*preferences main*/
+.ty-preferences .panel-header {
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+/*preferences stuff*/
+.ty-preferences .dropdown-menu > li,
+.dropdown-item {
+    font-weight: 500;
+    font-size: 1rem;
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+
+.ty-preferences .dropdown-menu .active,
+.ty-preferences .dropdown-menu li:hover,
+.dropdown-item:hover {
+    background-color: var(--boxes);
+    color: var(--primary-color);
+}
+
+#ty-spell-check-dict-missing-secondary-btn:hover {
+    color: var(--primary-color) !important;
+}
+
+.header-close .icon {
+    border: none !important;
+}
+
+/*preferences export*/
+
+.export-detail {
+    background-color: transparent !important /*required*/;
+}
+
+.export-items-list .separator {
+    margin: 0.4rem;
+    border-top: 1px solid var(--borders);
+}
+
+.export-items-list-control {
+    background-color: var(--boxes) !important /*required*/;
+}
+
+.export-item {
+    padding: 0.4rem !important /*required*/;
+    color: var(--light-text-color-darker);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.export-item.active {
+    background-color: transparent !important /*required*/;
+    color: var(--primary-color);
+    font-weight: 500 !important /*required*/;
+}
+
+/*DROPDOWN*/
+
+.dropdown-menu:not(.megamenu-menu-list),
+.auto-suggest-container {
+    background-color: var(--bg-color);
+    border: solid 1px var(--borders) !important;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    user-select: none;
+}
+
+.dropdown-menu > li > a,
+.auto-suggest-container li {
+    font-weight: 500;
+    font-size: 0.8rem;
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > li > a:hover,
+.menu-style-btn.active,
+.auto-suggest-container li:hover,
+.context-menu.dropdown-menu > .active > a,
+.context-menu.dropdown-menu > li > a:hover,
+.auto-suggest-container li.active {
+    color: var(--primary-color);
+    background-color: var(--boxes);
+}
+
+.menu-style-btn {
+    color: var(--text-color);
+    border: none;
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+
+.menu-style-btn:hover {
+    color: var(--primary-color);
+    background-color: var(--boxes);
+    border: none;
+}
+
+header .menu-style-btn:hover {
+    background-color: transparent;
+}
+
+.menu-item-container {
+    padding: 0 12px 0 4px;
+}
+
+.menu-item-container a.menu-style-btn {
+    padding: 0.3rem 0.6rem;
+    margin: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: var(--borders);
+    opacity: 1;
+}
+
+/*BUTTON*/
+
+.btn,
+button {
+    border: none !important;
+    border-radius: 0.3rem !important;
+    color: var(--text-color) !important;
+    transition-duration: 0.2s;
+    transition-property: all;
+    font-size: 0.9rem !important;
+    font-weight: 500;
+    outline: none;
+}
+
+.btn-default {
+    border: none !important;
+    border-radius: 0.3rem !important;
+    background-color: var(--boxes) !important;
+}
+
+.btn:hover,
+.button-hover {
+    border: none;
+    border-radius: 0.3rem;
+    background-color: var(--borders) !important;
+    color: var(--text-color);
+}
+
+button:active,
+button.active,
+.btn:active,
+.btn-default:active {
+    border: none;
+    border-radius: 0.3rem;
+    background-color: var(--boxes-darker) !important;
+    box-shadow: none;
+    outline: none;
+    color: var(--text-color);
+}
+
+.btn:focus {
+    border: none !important;
+    outline: none !important;
+    background-color: var(--boxes-darker);
+}
+
+.btn-primary {
+    border: none;
+    border-radius: 0.3rem;
+    background-color: var(--primary-color);
+    color: white !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    color: white;
+    background-color: var(--primary-color-darker) !important;
+}
+
+.btn.dropdown-toggle-split,
+.btn.dropdown-toggle-split:hover {
+    border-radius: 0rem 0.3rem 0.3rem 0rem !important;
+}
+
+#ty-spell-check-dict-missing-primary-btn {
+    border-radius: 0.3rem 0rem 0rem 0.3rem !important;
+}
+
+.open > .dropdown-toggle.btn-primary {
+    background-color: var(--primary-color);
+    border-color: transparent;
+}
+
+/*GHOST BUTTON*/
+
+.window-header button,
+#close-sidebar-menu-btn,
+.html-for-mac .sidebar-tab-btn,
+.label-hint,
+.ty-table-edit .btn,
+.zoom-hint-button,
+.md-rawblock-tooltip-btn,
+.md-delete-toc,
+#md-searchpanel .input-group-addon.btn,
+#pin-outline-btn,
+.icon-button {
+    background-color: transparent !important;
+    color: var(--light-text-color) !important;
+    opacity: 1 !important;
+    transition-duration: 0.2s;
+    transition-property: color;
+}
+
+.window-header button:hover,
+.window-header button:focus,
+#close-sidebar-menu-btn:hover,
+#close-sidebar-menu-btn:focus,
+.html-for-mac .sidebar-tab-btn:hover,
+.html-for-mac .sidebar-tab-btn:focus,
+.label-hint:hover,
+.label-hint:focus,
+.ty-table-edit .btn:hover,
+.ty-table-edit .btn:focus,
+.zoom-hint-button:hover,
+.zoom-hint-button:focus,
+.md-rawblock-tooltip-btn:hover,
+.md-rawblock-tooltip-btn:focus,
+.md-delete-toc:hover,
+.md-delete-toc:focus,
+#md-searchpanel .input-group-addon.btn:hover,
+#md-searchpanel .input-group-addon.btn:focus,
+#pin-outline-btn:hover,
+#pin-outline-btn:focus,
+.icon-button:hover,
+.icon-button:focus {
+    color: var(--primary-color) !important;
+    background: none !important;
+}
+
+.ty-table-edit .btn.active {
+    color: var(--primary-color) !important;
+    box-shadow: none;
+}
+
+/*IMAGE BUTTON*/
+
+.md-image-btn {
+    background-color: var(--boxes);
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.md-image-btn:before {
+    color: var(--text-color);
+    transition-duration: 0.2s;
+    transition-property: color;
+}
+
+.md-image-btn:hover {
+    background-color: var(--borders);
+}
+
+.md-image-btn:hover:before {
+    color: var(--primary-color);
+}
+
+.md-image-input-src-btn {
+    border-radius: 0.3rem 0rem 0rem 0.3rem !important;
+}
+
+.md-image-pick-file-btn {
+    border-left: none;
+    border-radius: 0rem 0.3rem 0.3rem 0rem !important;
+}
+
+/*SEARCH-INPUTS*/
+
+.search-input,
+.search,
+.form-control,
+#file-library-search-input {
+    background-color: transparent !important;
+    border-radius: 0.3rem !important;
+    border: solid 1px var(--boxes-darker) !important;
+    box-shadow: none !important;
+    color: var(---heading-text-color) !important;
+    font-size: 0.9rem !important;
+    font-weight: 400;
+    padding: 0.7rem !important;
+    height: 2rem;
+    transition-duration: 0.2s;
+    transition-property: border, box-shadow;
+}
+
+.search-input:hover,
+.search:hover,
+.form-control:hover,
+#file-library-search-input:hover {
+    border: solid 1px var(--boxes-darker2) !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+.search-input:focus,
+.search:focus,
+.form-control:focus,
+#file-library-search-input:focus {
+    background-color: transparent !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+    color: var(--heading-text-color) !important;
+    font-size: 0.9rem !important;
+    padding: 0.7rem !important;
+}
+
+.search-input::placeholder,
+.search::placeholder,
+.form-control::placeholder,
+#file-library-search-input::placeholder {
+    color: var(--light-text-color-darker) !important;
+}
+
+.clear-btn-icon {
+    top: 9px !important /*required*/;
+    right: 9px !important /*required*/;
+}
+
+.content tr.search-hit,
+.search-hit,
+.md-search-hit,
+/*.md-search-hit.md-search-select,*/
+.md-search-select,
+.ty-file-search-match-text {
+    background-color: var(--boxes-darkest);
+    color: white;
+    padding: 0.2rem 0.1rem;
+    border-radius: 0.2rem;
+}
+
+.md-search-hit.md-search-select {
+    background-color: var(--select-text-bg-color);
+} /* distinguishes text search selected from text search matched */
+
+/*ZOOM HINT*/
+
+#zoom-hint {
+    border-radius: 0.3rem;
+    border: solid 1px var(--borders);
+    user-select: none;
+    box-shadow: rgba(116, 129, 141, 0.08) 0px 2px 6px 0px;
+}
+
+#zoom-hint #zoom-hint-reset {
+    border-left: none;
+    font-weight: 600;
+}
+
+/*SEARCHPANEL*/
+
+#md-searchpanel {
+    border-bottom: 1px solid var(--borders);
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    max-height: 46px;
+}
+
+.mac-seamless-mode #md-searchpanel {
+    max-height: 70px;
+}
+
+#md-searchpanel.searchpanel-replace-mode {
+    max-height: 84px;
+}
+
+.mac-seamless-mode #md-searchpanel.searchpanel-replace-mode {
+    max-height: 108px;
+}
+
+#md-searchpanel input {
+    height: 2rem;
+    margin: 0rem !important;
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+}
+
+#md-searchpanel .input-group-addon {
+    height: 2rem;
+}
+
+#md-searchpanel .input-group-addon.close-btn {
+    padding-left: 8px;
+}
+
+.unibody-window #md-searchpanel .btn {
+    line-height: 2rem;
+}
+
+.searchpanel-search-option-btn {
+    top: 9px;
+    border: none;
+    color: var(--light-text-color-darker) !important /*required*/;
+    transition-duration: 0.3s;
+}
+
+.searchpanel-search-option-btn:hover {
+    color: var(--primary-color) !important /*required*/;
+    background-color: transparent !important /*required*/;
+}
+
+.searchpanel-search-option-btn.select,
+.searchpanel-search-option-btn.active {
+    color: white !important;
+    background-color: var(--primary-color) !important;
+}
+
+#searchpanel-regexp-option-btn {
+    right: 57px;
+}
+
+#searchpanel-case-option-btn {
+    right: 33px;
+}
+
+#searchpanel-word-option-btn {
+    right: 9px;
+}
+
+#searchpanel-word-option-btn,
+#searchpanel-case-option-btn {
+    background: none;
+}
+
+#md-searchpanel .btn:not(.close-btn):hover {
+    box-shadow: none;
+}
+
+/*SELECT*/
+/*TEXT INPUT*/
+/*NUMBER INPUT*/
+
+/* the input #md-grid-height doesn't have a type attached for some reason and needs to be adressed seperately */
+
+html select,
+html input[type="text"],
+html input[type="number"],
+#md-grid-height {
+    background-color: var(--bg-color) !important;
+    border-radius: 0.3rem !important;
+    border: solid 1px var(--boxes-darker) !important;
+    box-shadow: none !important;
+    color: var(--text-color) !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    padding: 0.3rem !important;
+    height: 2.1rem !important;
+    transition-duration: 0.2s;
+    transition-property: border;
+    cursor: text;
+}
+
+select {
+    cursor: pointer !important;
+}
+
+input[type="text"],
+input[type="number"] {
+    cursor: text;
+}
+
+html select:hover,
+html input[type="text"]:hover,
+html input[type="number"]:hover,
+#md-grid-height:hover {
+    background-color: var(--bg-color) !important;
+    border-radius: 0.3rem !important;
+    border-color: var(--boxes-darker2) !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+    color: var(--text-color) !important;
+    font-size: 0.9rem !important;
+}
+
+html select:focus,
+html input[type="text"]:focus,
+html input[type="number"]:focus,
+#md-grid-height:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder,
+#md-grid-height::placeholder {
+    color: var(--light-text-color-darker) !important;
+}
+
+input[disabled],
+input[disabled]:hover,
+input[disabled]:focus {
+    cursor: not-allowed;
+}
+
+/*TEXTAREA*/
+
+textarea {
+    background-color: transparent;
+    border: solid 1px var(--boxes-darker);
+    border-radius: 0.3rem;
+    transition-duration: 0.2s;
+}
+
+textarea:hover {
+    border-color: var(--boxes-darker2);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    outline: none;
+}
+
+/*MODAL*/
+
+.modal-header,
+#common-dialog .modal-header {
+    border-bottom: solid 1px var(--borders);
+    padding-bottom: 15px;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    user-select: none;
+}
+
+.modal-body {
+    font-size: 0.9rem;
+    color: var(--light-text-color-darker);
+    user-select: none;
+}
+
+.modal-content {
+    box-shadow: rgba(116, 129, 141, 0.15) 0px 3px 10px 0px;
+    border: solid 1px var(--boxes-darker);
+    border-radius: 0.3rem;
+}
+
+.modal-footer {
+    border-top: solid 1px var(--borders);
+}
+
+.modal-open .modal.fade.in {
+    background: none;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/*LANGS*/
+
+.ty-spell-check-panel-item {
+    font-weight: 500;
+    transition-duration: 0.2s;
+    transition-property: background-color, color;
+}
+
+.ty-spell-check-panel-item:hover {
+    color: var(--primary-color);
+    background-color: var(--boxes);
+}
+
+.ty-spell-check-panel-item.ty-active {
+    background-color: var(--boxes);
+}
+
+/*TOOLTIP*/
+
+.ty-tooltip {
+    background-color: var(--bg-color) !important;
+    border-radius: 0.3rem !important;
+    border: 1px solid var(--borders) !important;
+    -webkit-filter: none !important;
+    filter: none;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+}
+
+/*FOOTER*/
+
+.footer-item:hover {
+    background-color: var(--boxes) !important;
+}
+
+#footer-word-count-info {
+    padding: 4px 0;
+}
+
+.footer-word-count-info-line {
+    padding: 0.25rem;
+    line-height: 1.6rem;
+}
+
+#footer-word-count-info tr {
+    font-weight: 500;
+    font-size: 0.8rem;
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+
+#footer-word-count-info tr td:nth-child(1) {
+    padding: 0rem;
+    padding-right: 1rem;
+}
+
+#footer-word-count-info .ty-footer-word-count-all tr:hover {
+    color: var(--primary-color) !important;
+    background-color: var(--boxes) !important;
+}
+
+/*MEGAMENU*/
+
+.megamenu-menu {
+    box-shadow: none;
+    background-color: var(--boxes);
+    border-right: 1px solid var(--borders);
+}
+
+.megamenu-opened .megamenu-menu {
+    left: 0px;
+}
+
+#megamenu-content {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#megamenu-menu-list {
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+}
+
+#megamenu-menu-list li a {
+    color: var(--text-color);
+    height: 2rem;
+    line-height: 1.8rem;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+#megamenu-menu-list li a:hover {
+    background-color: var(--borders);
+}
+
+#megamenu-menu-list li a.active {
+    color: var(--primary-color);
+    background-color: white;
+    outline: solid 1px var(--borders);
+}
+
+#megamenu-menu-list .divider {
+    background-color: var(--borders);
+    margin: 16px 0 0 0;
+}
+
+.megamenu-menu-list .saved #m-saved {
+    cursor: default;
+}
+
+.megamenu-menu-list .saved #m-saved .fa {
+    color: var(--primary-color);
+}
+
+.megamenu-menu-list .saved #m-saved:hover {
+    background-color: transparent;
+}
+
+.megamenu-menu-list #m-close:hover {
+    color: var(--danger-color);
+}
+
+.megamenu-menu-header {
+    border-bottom: solid 1px var(--borders);
+    margin-bottom: 1.2rem;
+    height: 74px;
+    transition-duration: 0.3s;
+}
+
+.megamenu-menu-header:hover {
+    background-color: var(--borders);
+}
+
+.megamenu-menu-header #megamenu-menu-header-title {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 16px;
+    left: 56px;
+    top: 24px;
+}
+
+#megamenu-back-btn {
+    color: var(--text-color);
+    font-size: 16px;
+    left: 24px;
+    top: 24px;
+}
+
+.megamenu-opened header {
+    background-color: var(--bg-color);
+    background-image: none;
+}
+
+.megamenu-content {
+    background-color: var(--bg-color);
+    background-image: none;
+}
+
+.megamenu-menu-panel:not(:first-of-type) {
+    margin-top: 2rem;
+}
+
+.megamenu-menu-panel h1 {
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin: 1rem 0rem 0.4rem 0rem;
+}
+
+.megamenu-menu-panel h2 {
+    font-weight: 800;
+    font-size: 1.3rem;
+    margin: 1rem 0rem 0.4rem 0rem;
+}
+
+/*recent files*/
+
+#recent-file-panel tbody tr {
+    font-weight: 600;
+    transition-duration: 0.4s;
+}
+
+#recent-file-panel tbody tr:hover,
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+    color: var(--primary-color);
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: var(--boxes);
+}
+
+/*about help*/
+
+.about-content-slogon {
+    color: var(--light-text-color);
+}
+
+/*for the god himself*/
+.about-content-slogon span {
+    color: var(--primary-color) !important;
+}
+
+#about-content tbody tr {
+    font-weight: 500;
+    transition-duration: 0.4s;
+}
+
+#about-content tbody tr:hover {
+    color: var(--primary-color);
+    background-color: var(--boxes) !important /*required important*/;
+}
+
+.long-btn {
+    margin-bottom: 12px;
+    margin-left: 2px;
+    box-shadow: rgba(116, 129, 141, 0.1) 2px 2px 6px;
+    background-color: white;
+    border: 1px solid var(--borders);
+    border-radius: 0.3rem;
+    padding: 1rem;
+
+    font-weight: 700;
+    font-size: 1rem;
+
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.long-btn:hover {
+    background-color: var(--primary-color);
+    border: 1px solid transparent;
+    color: white !important /*important required*/;
+    box-shadow: rgba(116, 129, 141, 0.1) 2px 2px 6px,
+        rgba(26, 168, 139, 0.2) 0px 0px 10px;
+}
+
+#m-import-local:hover .preference-item-hint {
+    color: white;
+    opacity: 0.7;
+}
+
+#recent-file-panel-action-btn {
+    height: 34px;
+    border: none;
+    background-color: var(--boxes);
+}
+
+#theme-preview-grid {
+    max-width: none;
+    padding: 1.5rem;
+    background-color: var(--boxes);
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1.5rem;
+}
+
+.theme-preview-div {
+    border: none;
+    border-radius: 0.4rem;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 0px 15px;
+    margin: 0rem;
+    transition-duration: 0.3s;
+}
+
+.theme-preview-div:hover {
+    box-shadow: rgba(116, 129, 141, 0.5) 3px 8px 15px;
+    cursor: pointer;
+    transform: rotate3d(1, -0.2, 0.2, 15deg);
+}
+
+.theme-preview-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.4rem;
+}
+
+.theme-preview-content html {
+    width: 100%;
+    height: 100%;
+}
+
+.theme-preview-div.active .fa {
+    color: var(--primary-color);
+    bottom: 4px;
+    left: 4px;
+}
+
+.theme-preview-div .fa-check-circle:before {
+    background-color: var(--bg-color);
+    padding: 0px 2px;
+    border-radius: 1rem;
+}
+
+.megamenu-menu-panel tbody tr {
+    border-radius: 0.3rem;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.megamenu-menu-panel tbody tr:hover {
+    background-color: var(--borders) !important /*required important*/;
+}
+
+/*MIN MAX CLOSE*/
+#w-min,
+#w-max,
+#w-restore,
+#w-close {
+    border-radius: 0px !important;
+    font-size: 10px !important;
+    width: 46px !important;
+    height: 29px !important;
+}
+
+.btn.toolbar-icon svg,
+.btn.toolbar-icon .ty-icon {
+    position: relative;
+    top: 2px;
+}
+
+#w-close.btn.toolbar-icon .ty-icon {
+    left: 1px;
+}
+
+#w-close:hover {
+    background-color: var(--danger-color) !important;
+    color: white !important;
+}
+
+/*EXTRA STUFF*/
+
+a[type="page-link"] {
+    display: block;
+    background-color: white;
+    box-shadow: rgba(116, 129, 141, 0.2) 0px 3px 8px 0px;
+    border: 1px solid var(--borders);
+    border-radius: 0.3rem;
+    padding: 1rem;
+
+    font-weight: 600;
+
+    transition-duration: 0.2s;
+    transition-property: border, box-shadow;
+}
+
+a[type="page-link"]:hover {
+    box-shadow: rgba(116, 129, 161, 0.1) 0px 3px 8px 0px;
+    border: 1px solid var(--primary-color);
+}
+
+p[type="description"] {
+    color: var(--light-text-color);
+}
+
+/*kbd*/
+
+kbd {
+    font-family: var(--font-family);
+}
+
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>index</title>
+</head>
+<body class='typora-export typora-export-show-outline typora-export-no-collapse-outline'><div class='typora-export-content'>
+<div class="typora-export-sidebar"><div class="outline-content"><li class="outline-item-wrapper outline-h1"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#2023-台大新生選課-懶人包">2023 台大新生選課 懶人包</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#前言">前言</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#選課流程">選課流程</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#概要">概要</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#時程">時程</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#預選">預選</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#什麼是預選">什麼是預選？</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#怎麼預選">怎麼預選</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#學分上下限">學分上下限</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#預選課表的小建議">預選課表的小建議</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#初選">初選</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#系統操作說明">系統操作說明 </a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#加退選">加退選</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#加退選方式說明">加退選方式說明</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#停修">停修</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#補充資訊">補充資訊</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#初選分發規則">初選分發規則</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#課程種類間的分發順位">課程種類間的分發順位</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#通識課程分發規則">通識課程分發規則</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#體育分發規則">體育分發規則</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#其餘課程分發規則">其餘課程分發規則</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#第三類加選分發規則">第三類加選分發規則</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#全校共同課程">全校共同課程</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#大一外文-6-學分">大一外文 [6 學分]</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#大學國文-6-學分-或-3-學分-＋-3-學分-a1--a4-通識">大學國文 [6 學分 或 3 學分 ＋ 3 學分 A1 ~ A4 通識]</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#通識-15-學分-或-18-學分---視國文學分而定">通識 [15 學分 或 18 學分 - 視國文學分而定]</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#進階英文一二--0-學分">進階英文一、二  [0 學分]</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#服務學習-0-學分">服務學習 [0 學分]</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#體育-4-學分">體育 [4 學分]</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#國防-0-學分">國防 [0 學分]</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#名詞索引">名詞索引</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#系上課程規定會見到的課程種類">系上課程規定會見到的課程種類</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h4"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#課程網裡面會看到的名詞">課程網裡面會看到的名詞</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#先修科目規定擋修）">先修科目規定（擋修）</a></div><ul class="outline-children"></ul></li></ul></li><li class="outline-item-wrapper outline-h2"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#相關網站與實用資源">相關網站與實用資源</a></div><ul class="outline-children"><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#選課規定與相關文件">選課規定與相關文件</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#選課網站">選課網站</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#課程評價">課程評價</a></div><ul class="outline-children"></ul></li><li class="outline-item-wrapper outline-h3"><div class="outline-item"><span class="outline-expander"></span><a class="outline-label" href="#學分學程與領域專長">學分學程與領域專長</a></div><ul class="outline-children"></ul></li></ul></li></ul></li></div></div><div id='write'  class=''><h1 id='2023-台大新生選課-懶人包'><span>2023 台大新生選課 懶人包</span></h1><blockquote><p><strong><span>作者：Benson Chiu</span></strong><span> aka 班森</span></p><ul><li><p><a href='https://www.instagram.com/benson_study_life/'><span>benson_study_life</span></a><span> 廢文流讀書帳的版主</span></p></li><li><p><span>台大資管系雙主修經濟系準備升大三的爆肝學生</span></p></li><li><p><span>喜歡教學、到各地旅遊，興趣領域是資料科學、軟體開發</span></p></li><li><p><span>我很討厭芋頭</span></p></li></ul></blockquote><h2 id='前言'><span>前言</span></h2><p><span>這份選課懶人包含以下單元：</span></p><ul><li><p><strong><span>選課流程</span></strong><span>會簡單描述大家接下來將會遇到的一些</span><strong><span>重要時間點</span></strong><span>，以及在這個時間點各位</span><strong><span>需要完成的事項</span></strong><span>。</span></p></li><li><p><strong><span>預選、初選、加退選、停修</span></strong><span>會著重於解釋大家在選課各階段</span><strong><span>操作步驟</span></strong><span>以及需要注意的重點</span></p></li><li><p><strong><span>補充資訊</span></strong><span>包含共同課程的</span><strong><span>詳細介紹</span></strong><span>、</span><strong><span>名詞解釋</span></strong><span>、</span><strong><span>擋修處理</span></strong><span>與</span><strong><span>初選、三類加選分發機制</span></strong></p></li><li><p><strong><span>相關網站與實用資源</span></strong><span>會提供給大家「修課規定」、「選課」與「課程評價」等</span><strong><span>參考連結</span></strong></p></li></ul><p><span>希望這一份懶人包可以對各位新鮮人有所幫助！ 歡迎來到台大 : )</span></p><h2 id='選課流程'><span>選課流程</span></h2><h3 id='概要'><span>概要</span></h3><p><img src="flow.png" referrerpolicy="no-referrer" alt="flow"></p><h3 id='時程'><span>時程</span></h3><iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Asia%2FTaipei&title=112-1%20%E5%8F%B0%E5%A4%A7%E9%81%B8%E8%AA%B2%E6%97%A5%E7%A8%8B&src=Y18yZjBhNDJmOTEyNDc1YjdiOGU0YTQ1ZWYyMTBkNjQwMjU3ZWFkN2I4OWVhOTZjZmU0YjBmYmYyNTEzNGYxZjExQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F4511E" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe><h2 id='預選'><span>預選</span></h2><blockquote><p><span>8/01 (二) ～ 8/17 (四)</span></p></blockquote><h3 id='什麼是預選'><span>什麼是預選？</span></h3><p><span>所謂預選，就是指在初選一階之前確認好自己所要選的課程清單，並加入課程網中「本學期我預計要選的課程列表」。當我們將自己所要選的課程清單加入到這個列表過後，</span><strong><span>在選課期間，我們可以直接把這個列表匯入至選課系統的志願表中</span></strong><span>，我們到時候要做的事情就只剩下</span><strong><span>微小的調整</span></strong><span>和</span><strong><span>選填志願</span></strong><span>。</span></p><p><img src="image-20230808215554329.png" alt="image-20230808215554329" style="zoom: 50%;" /></p><h3 id='怎麼預選'><span>怎麼預選</span></h3><ol><li><p><span>進入</span><a href='https://nol.ntu.edu.tw/nol/guest/index.php'><span>台大課程網</span></a><span>，並且</span><strong><span>登入計中帳號</span></strong></p></li></ol><p><img src="/Users/bensonchiu/Documents/Documents/bensonstudylife.github.io/2023_course/Screen Shot 2023-08-08 at 9.59.16 PM.png" alt="Screen Shot 2023-08-08 at 9.59.16 PM" style="zoom: 50%;" /></p><ol start='2' ><li><p><span>詳細閱讀</span><strong><span>系所課程規定</span></strong></p><ul><li><p><span>各系所最新的</span><strong><span>課程規定與學分規劃</span></strong><span>可以到</span><a href='http://140.112.161.31/NTUVoxCourse/index.php/uquery/index'><span>各系所必修科目及應修學分資料查詢</span></a></p></li><li><p><span>或是直接進入自己系所的網頁查看課程規定。以台大資管系為例，可參照</span><a href='https://management.ntu.edu.tw/IM/curriculum/undergraduate'><span>此連結</span></a></p></li><li><p><strong><span>每個系都會有自己的學分採計等的特別規定！</span></strong><span>務必要詳細閱讀，並且</span><strong><span>注意入學年份</span></strong></p><blockquote><p><span>[重要] 系所課程規定攸關你四年後的</span><strong><span>畢業門檻</span></strong><span>，如果你對任何課程規定有不清楚的情形出現，</span><strong><span>強烈建議直接詢問系辦！！！！</span></strong></p></blockquote></li></ul></li></ol><ol start='2' ><li><p><span>透過</span><strong><span>課程查詢系統</span></strong><span>，尋找並篩選你</span><strong><span>可能在這學期會修習的課程</span></strong></p><ul><li><p><strong><span>課程快速查詢</span></strong><span> ：可以透過區塊查詢本學期的所有課程</span></p></li><li><p><strong><span>共同課程</span></strong><span>： 國文、外文、英文</span></p></li><li><p><strong><span>系所課程</span></strong><span> ：查詢各系所開設之必修、選修課</span></p></li><li><p><strong><span>通識/新生專題/新生講座/基本能力</span></strong></p></li><li><p><strong><span>體育、軍訓</span></strong></p></li></ul></li><li><p><span>若想要將課程加入到「我預計要選的課程列表」，點擊課程清單右側的</span><strong><span>加入</span></strong></p><p><img src="add.png" referrerpolicy="no-referrer" alt="add"></p></li></ol><ol start='5' ><li><p><span>點擊課程網左側的</span><strong><span>「預計要選的課」</span></strong></p><p><img src="/Users/bensonchiu/Documents/Documents/bensonstudylife.github.io/2023_course/Screen Shot 2023-08-08 at 10.11.47 PM.png" alt="Screen Shot 2023-08-08 at 10.11.47 PM" style="zoom: 50%;" /></p></li></ol><p><span>		</span><span>便可查看</span><strong><span>「我預計要選的課程列表」</span></strong></p><p><span>																	</span><img src="/Users/bensonchiu/Documents/Documents/bensonstudylife.github.io/2023_course/Screen Shot 2023-08-08 at 10.15.24 PM.png" alt="Screen Shot 2023-08-08 at 10.15.24 PM" style="zoom: 50%;" /><span>					</span></p><p><span>		</span><span>在該列表內的課程都可以被匯入至初選時會使用的</span><strong><span>「選課系統」</span></strong><span>，若要刪除，點選側邊欄的刪除鍵即可</span></p><blockquote><p><span>台大目前亦有研發</span><a href='https://course.ntu.edu.tw/'><span>新版課程網</span></a><span>，唯獨現在</span><strong><span>還在測試階段</span></strong><span>，要使用台大 IP 登入才能使用，故今年入學的新生需要</span><strong><span>拿到學生證</span></strong><span>並</span><strong><span>取得 VPN</span></strong><span> 後才能在校外登入新版課程網！</span></p><ul><li><p><span>新課程網的使用說明：</span><a href='https://hackmd.io/kYlOI-zvT1qQQAn4POjxUA'><span>臺大新版課程網使用教學 - HackMD</span></a></p></li></ul></blockquote><h3 id='學分上下限'><span>學分上下限</span></h3><ul><li><p><a href='https://www.aca.ntu.edu.tw/WebUPD/aca/UAADForms/112-1CREDIT.pdf'><span>國立臺灣大學112學年度第1學期修課學分數上下限規定 (ntu.edu.tw)</span></a></p></li><li><p><strong><span>大部分</span></strong><span>學士班科系 - 大一至大三最低 15 學分  / 大四最低 9 學分 / 最高 25 學分</span></p></li><li><p><strong><span>有例外</span></strong><span>，請查閱學校規定</span></p></li><li><p><span>系排前 10％ 、GPA 3.9 以上或輔系 ：最高上限提高至 31 學分</span></p></li><li><p><span>雙主修 ： 最高上限提高至 33 學分</span></p></li><li><p><strong><span>修課學分數上限會在初選二階調整！</span></strong></p><ul><li><p><span>也就是說：初選一階大家上限都是 25 學分</span></p></li></ul></li></ul><h3 id='預選課表的小建議'><span>預選課表的小建議</span></h3><ol><li><p><span>一開始，可以先排入下述類型的課程：</span></p><ul><li><p><span>被標註為</span><strong><span>「必帶」</span></strong><span>的必修課程</span></p></li><li><p><strong><span>各班次時間相同</span></strong><span>的的必修課程</span></p></li><li><p><span>其他 </span><strong><span>100% 確定一定會選到</span></strong><span>的課程</span></p></li></ul></li><li><p><span>排入完成後，查看自己空下來的時段，並排入自己有興趣的課程</span></p></li><li><p><span>預排的時候，不用擔心衝堂或者時間衝突的問題，分發機制會幫你解決好。</span></p></li><li><p><strong><span>國文、英文、通識課都不好選</span></strong><span>，所以</span><strong><span>能排多一點課程，就排多一點課程</span></strong></p></li></ol><blockquote><p><span> 台大選課就跟賭博一樣，真的不要報太大期望</span></p></blockquote><h2 id='初選'><span>初選</span></h2><blockquote><p><mark><span>初選一階</span></mark><span> 8/18（五）～8/21（一），每日 9:00～次日凌晨 3:00</span>
+<mark><span>初選二階</span></mark><span> 8/25（五）～8/26（六），每日 9:00～次日凌晨 3:00</span></p><p><span>台大選課系統連結（擇一進入）：</span></p><ul><li><p><a href='https://if177.aca.ntu.edu.tw/index.php'><span>臺大選課系統ㄧ (ntu.edu.tw)</span></a></p></li><li><p><a href='https://if192.aca.ntu.edu.tw/index.php'><span>臺大選課系統二 (ntu.edu.tw)</span></a></p></li></ul><p><span>初選系統尚未公開，故只能用過去的截圖 (2021) 簡單說明</span>
+<span>預計 08/19 晚上會開線上工作坊帶大家</span><strong><span>實際操作一次</span></strong><span>選課系統並介紹台大生活，歡迎大家參加！</span></p></blockquote><h3 id='系統操作說明'><span>系統操作說明 </span></h3><blockquote><p><span>這是 2021 &amp; 2022 年的系統，今年還不知道會不會改</span></p></blockquote><ol><li><p><span>當初選開始時，會有一個</span><strong><span>「進入初選一 / 二階」</span></strong><span>的按鈕，請直接點進去</span></p></li><li><p><span>進入選課網頁後，應該會看到如下方的畫面（下面為 2021年選課系統班森的實際截圖）</span></p><p><img src="sel_1.png" referrerpolicy="no-referrer" alt="sel_1"></p><ul><li><p><span>首頁：這邊會顯示您所選的課程列表，以</span><strong><span>「國文」「英外文」「微積分」「其他科目」</span></strong><span>區分</span></p></li><li><p><span>匯入預選課程：選課系統會自動從將您課程網中</span><strong><span>「本學期我預計要選的課程列表」</span></strong><span>匯入課程，您可以對於您具有登記資格的課程填寫志願序</span></p><blockquote><p><span>志願序不要照順序填（如：1, 2, 3……)，</span><strong><span>宜採用跳號的方式</span></strong><span>（如：1, 3, 5, 7 …… / 1, 5, 10, 15……），這樣一來你之後想調整志願的次序時會方便非常多！ 系統是看數字的相對大小作志願分發的！</span></p></blockquote></li></ul><ul><li><p><span>登記選課：輸入 </span><strong><span>「流水號」</span></strong><span> or </span><strong><span>「課號＋班次」</span></strong><span>將課程加入志願表</span></p></li><li><p><span>退選：如果你想要移除某些已經登記的課程，可以在這裡進行退選</span></p><blockquote><p><strong><span>可以退必帶嗎？ </span></strong>
+<span>是可以的！但是您自己要做好未來的課程規劃以便在畢業前可以修完這些課</span></p></blockquote><blockquote><p><span>健康體適能僅在上學期開設，通常</span><strong><span>選課系統會自動將健康體適能帶入各位新生大一上的學期課表</span></strong><span>。若因個人特殊因素無法隨班上課而退選，且欲選擇其他時段健康體適能課程，請先取得該時段授課教師同意後，再至體育室領取授權碼。</span></p></blockquote></li></ul><ul><li><p><span>上課時間表：</span></p><p><span>你目前所選課程的概況，包含必帶課程（黑字）以及填好志願的課程（藍＋紅字）</span></p><p><img src="timetable.png" referrerpolicy="no-referrer" alt="timetable"></p></li></ul><p>&nbsp;</p></li></ol><h2 id='加退選'><span>加退選</span></h2><blockquote><p><mark><span>加退選時程請見上方的 </span><strong><span>Google Calendar</span></strong></mark></p><p><span>加選網站和初選相同，皆為台大選課系統（擇一進入）：</span></p><ul><li><p><a href='https://if177.aca.ntu.edu.tw/index.php'><span>臺大選課系統ㄧ (ntu.edu.tw)</span></a></p></li><li><p><a href='https://if192.aca.ntu.edu.tw/index.php'><span>臺大選課系統二 (ntu.edu.tw)</span></a></p></li></ul></blockquote><h3 id='加退選方式說明'><span>加退選方式說明</span></h3><p><span>在加退選階段，初選時各門課所設定的身分限制皆不適用，但</span><strong><span>第一類、第三類的先修科目限制為例外</span></strong></p><figure><table><thead><tr><th><span>加選方式</span></th><th><span>簡述</span></th><th><span>進行方式</span></th></tr></thead><tbody><tr><td><span>第一類加選</span></td><td><span>課程加選以</span><strong><span>先搶先贏</span></strong><span>的方式進行，直到選課人數到達 </span><strong><span>400人</span></strong><span> 之上限。</span></td><td><span>在額滿前直接上網登記加選該課程</span></td></tr><tr><td><span>第二類加選 </span><strong><span>加簽大地</span></strong></td><td><span>由各課程之授課教師所發放</span><strong><span>授權碼</span></strong></td><td><span>上選課系統用該授權碼登記加選該課程</span></td></tr><tr><td><span>第三類加選</span></td><td><span>和初選類似，上選課系統</span><strong><span>登記分發</span></strong></td><td><span>- 若登記人數大於剩餘名額 → 隨機分發 - 若登記人數小於剩餘名額 → 全數錄取</span></td></tr><tr><td><span>人工加簽</span></td><td><span>填寫</span><strong><span>教師同意加簽單</span></strong></td><td><span>列印教師同意加簽單，經教授簽章同意後，將該表單送至所屬教務單位</span></td></tr></tbody></table></figure><blockquote><p><strong><span>第二類加選小撇步</span></strong></p><ol><li><p><span>授權碼發放方式通常會寫在課程網的</span><strong><span>授課大綱</span></strong><span>、</span><strong><span>課程網站</span></strong><span>，或是公布於</span><strong><span>台大交流版 or 課程版 / ptt</span></strong><span> 等，記得一定要時刻關注</span></p></li><li><p><span>建議可以事先寄信給授課教師或者助教，老師們的 Email 都可以在課程網上找得到，務必信件內容</span><strong><span>要符合書信禮儀且有禮貌</span></strong><span>。</span></p></li><li><p><strong><span>第一堂課務必要到上課現場</span></strong><span>，有些教授會在課堂上讓大家加簽（然後有可能第二堂課才去的話就不給你加選了）</span></p></li></ol></blockquote><h2 id='停修'><span>停修</span></h2><blockquote><p><strong><span>停修申請期限：11 月 24 日</span></strong><span> 部分課程另有規定（如微積分），依該門課自行之規定為準</span></p></blockquote><p><span>在規定時間內，到</span><strong><span>「停修課程網路申請系統」</span></strong><span>進行申請，下載同意書給予任課教師與系所主管簽章，完畢後將申請表與同意文件合併後在期限內上傳至申請系統。</span></p><ol><li><p><span>每學期停修以一科為限，若有特殊情況，可以填寫</span><strong><span>「學生報告書」</span></strong></p></li><li><p><span>停修課程會在</span><strong><span>成績單上留下紀錄</span></strong><span>，但是</span><strong><span>不會計入學期 GPA</span></strong></p></li></ol><blockquote><p><mark><span>比較</span></mark><span> 退選 vs 停修</span></p><figure><table><thead><tr><th>&nbsp;</th><th><span>期限</span></th><th><span>成績單</span></th><th><span>學期成績</span></th></tr></thead><tbody><tr><td><span>退選</span></td><td><span>09/18 08:00</span></td><td><span>不會出現</span></td><td><span>不會計入</span></td></tr><tr><td><span>停修</span></td><td><span>11/24 17:00</span></td><td><strong><span>會出現</span></strong></td><td><span>不會計入</span></td></tr></tbody></table></figure><p>&nbsp;</p></blockquote><h2 id='補充資訊'><span>補充資訊</span></h2><h3 id='初選分發規則'><span>初選分發規則</span></h3><p><span>詳細規定請見 </span><a href='https://www.aca.ntu.edu.tw/WebUPD/aca/UAADRules/選課辦法.pdf'><span>國立臺灣大學學生選課辦法</span></a><span> 第十二條</span></p><h4 id='課程種類間的分發順位'><span>課程種類間的分發順位</span></h4><ul><li><p><span>第一順位：</span><strong><span>國文領域</span></strong><span>：</span></p><ul><li><p><span>上下學期</span><strong><span>皆採獨立之志願登記</span></strong></p></li><li><p><span>登記人數超過各課程規定之修課人數上限時，依</span><strong><span>年級高低順序</span></strong><span>分發</span></p></li><li><p><span>未曾修讀國文領域課程學生，若尚有名額，再依</span><strong><span>年級高低順序</span></strong><span>分發</span></p></li></ul></li><li><p><span>第二、三順位：</span><strong><span>外(英)文領域、微積分</span></strong></p><ul><li><p><strong><span>第一學期</span></strong><span>皆採</span><strong><span>獨立之志願登記</span></strong><span>，第二學期</span><strong><span>與</span><mark><span>國文以外的課程</span></mark><span>共同登記分發</span></strong></p></li><li><p><span>登記人數超過各課程規定之修課人數上限時，則</span><strong><span>以亂數分發</span></strong></p></li><li><p><span>惟微積分得依開課單位規定</span><strong><span>保留部分名額予大二以上學生</span></strong></p></li></ul></li><li><p><span>第四順位：</span><mark><strong><span>其他科目</span></strong></mark></p><ul><li><p><span>先處理</span><strong><span>「一般通識」（不含兼通識的課程）</span></strong><span>，再處理</span><strong><span>剩下的科目</span></strong></p></li></ul></li></ul><h4 id='通識課程分發規則'><span>通識課程分發規則</span></h4><ul><li><p><span>優先分發各學系的</span><strong><span>指定領域課程</span></strong></p></li><li><p><span>一般通識課程每門課初選階段各保留</span><strong><span>四分之一名額</span></strong><span>予</span><strong><span>學士班一、二年級學生</span></strong></p></li><li><p><span>餘額再依</span><strong><span>學生年級由高至低</span></strong><span>分配。但</span><strong><span>學士班學生</span></strong><span>優先於</span><strong><span>碩、博士班研究生</span></strong></p></li></ul><h4 id='體育分發規則'><span>體育分發規則</span></h4><p><span>必修學分 → 年級高低</span></p><h4 id='其餘課程分發規則'><span>其餘課程分發規則</span></h4><p><span>身份別 → 年級高低</span></p><h3 id='第三類加選分發規則'><span>第三類加選分發規則</span></h3><ul><li><p><span>登記人數超過修課人數上限時</span></p><ul><li><p><strong><span>選修課</span></strong><span>：亂數</span></p></li><li><p><strong><span>必修課：</span></strong><span>身份別 → 亂數</span></p></li></ul></li></ul><blockquote><p><mark><span>身份別</span></mark><span> </span></p><ul><li><p><strong><span>本系所或雙主修優先</span></strong><span> → </span><strong><span>輔系次優</span></strong><span> → 不具前述身份之身心障礙學生第三→ 其它學生最後</span></p></li><li><p><span>若為</span><strong><span>英文授課之課程</span></strong><span>，以外籍生為第三優先，不具前述身份之身心障礙學生第四優先，其它學生最後</span></p></li></ul><p><mark><span>年級高低</span></mark></p><figure><table><thead><tr><th><span>課程</span></th><th><span>第一優先年級</span></th><th><span>第二優先年級</span></th><th><span>第三優先年級</span></th><th><span>第四優先年級</span></th></tr></thead><tbody><tr><td><span>教育學程</span></td><td><span>大四,碩二, 博二及以上</span></td><td><span>大二, 大三, 碩一, 博一</span></td><td><span>其他</span></td><td>&nbsp;</td></tr><tr><td><span>其他課程</span></td><td><span>大四,碩二, 博二及以上</span></td><td><span>大三, 碩一, 博一</span></td><td><span>大二</span></td><td><span>大一</span></td></tr></tbody></table></figure></blockquote><h3 id='全校共同課程'><span>全校共同課程</span></h3><h4 id='大一外文-6-學分'><span>大一外文 [6 學分]</span></h4><ul><li><p><span>有些系</span><strong><span>可以選擇各國語言</span></strong><span>，有些系</span><strong><span>限修英文</span></strong><span>，需要注意</span></p></li><li><p><a href='https://www.forex.ntu.edu.tw/大一英文-選課注意事項/#'><span>大一英文-選課注意事項 | 台大外文系 (ntu.edu.tw)</span></a></p></li><li><p><span>大一英文達到規定標準（滿足下列條件之一），可以</span><strong><span>免修</span></strong></p><ul><li><p><strong><span>通過全民英語能力分級檢定中高級初試與複試；</span></strong></p></li><li><p><strong><span>托福網路測驗（TOEFL iBT）八十三分（含）以上； </span></strong></p></li><li><p><strong><span>國際英語測試（IELTS Academic）六點五級（含）以上； </span></strong></p></li><li><p><span>英國劍橋大學中等英文認證（FCE 或 FCE for Schools）Grade B（含） 以上； </span></p></li><li><p><strong><span>國際溝通英語測驗（TOEIC）聽讀總分八百六十五分（含）以上，口說 一百七十分（含）以上，寫作一百六十五分（含）以上；</span></strong></p></li><li><p><span>外語能力測驗（FLPT）之英語測驗聽讀總分兩百十七分（含）以上， 口說 S-2+級分（含）以上，寫作 B 級分（含）以上； </span></p></li><li><p><span>TOEFL Essentials 八點五級（含）以上； </span></p></li><li><p><span>AP Exams English Language and Composition 或 English Literature and  Composition 達到四級（含）以上；</span></p></li><li><p><span>英語為母語之僑外生，檢具小學和中學畢業證書，或至少就讀五年之正 式官方成績單（兩者皆須於國際處規範之英語系國家取得）</span></p></li><li><p><a href='https://curri.aca.ntu.edu.tw/waive_base/doc/大一英文免修施行要點.pdf'><span>大一英文免修施行要點 (ntu.edu.tw)</span></a></p></li></ul></li><li><p><span>大一英文達到規定標準（滿足下列條件之一），可以</span><strong><span>參與免修考</span></strong></p><ul><li><p><span>「指定科目考試」英語科成績八十八分 （含）以上</span></p></li><li><p><span>「學科能力測驗」成績達十五級分並於「大學入學考試中心高中英語聽力測驗」獲得 A 級分</span></p></li></ul></li></ul><ul><li><p><a href='https://curri.aca.ntu.edu.tw/waive_base/waive_base.asp'><span>免修申請：臺大學士班基礎學科免修申請系統 (ntu.edu.tw)</span></a></p></li></ul><h4 id='大學國文-6-學分-或-3-學分-＋-3-學分-a1--a4-通識'><span>大學國文 [6 學分 或 3 學分 ＋ 3 學分 A1 ~ A4 通識]</span></h4><ul><li><p><a href='https://nol.ntu.edu.tw/nol/note/111-1/chi.htm'><span>大學國文選課及修習注意事項(111-1 學年度，請隨時注意今年版本)</span></a></p></li><li><p><span>大學國文達到規定標準（同時滿足下列條件），可以</span><strong><span>參與免修考</span></strong></p><ul><li><p><span>大學入學學科能力測驗國文達十五級分，且國寫知性題與情意題成績兩題皆達 A</span></p></li></ul></li><li><p><a href='https://curri.aca.ntu.edu.tw/waive_base/waive_base.asp'><span>免修申請：臺大學士班基礎學科免修申請系統 (ntu.edu.tw)</span></a></p></li></ul><h4 id='通識-15-學分-或-18-學分---視國文學分而定'><span>通識 [15 學分 或 18 學分 - 視國文學分而定]</span></h4><ul><li><p><span>通識課程分為 </span><strong><span>A1 ~ A8 八大領域</span></strong></p></li><li><p><span>兼跨兩個領域者，得選擇</span><strong><span>計入其中任一領域</span></strong><span> 應修習系所規定的三個指定領域課程，其餘可自由修習</span></p></li><li><p><span>可修習</span><strong><span>「溝通表達與職涯發展課程」</span></strong><span>以計入通識學分，至多6學分。</span></p></li><li><p><span>[重要連結] </span></p><ul><li><p><span>請參考 </span><a href='https://nol.ntu.edu.tw/nol/note/112-1/comarea.pdf'><strong><span>各院系指定修習領域一覽表</span></strong></a></p></li><li><p><span>請參考 </span><a href='https://nol.ntu.edu.tw/nol/note/112-1/com.htm'><strong><span>「通識課程」與「溝通表達與職涯發展課程」注意事項</span></strong></a></p></li></ul></li></ul><h4 id='進階英文一二--0-學分'><span>進階英文一、二  [0 學分]</span></h4><ul><li><p><span>免修門檻</span><strong><span>較大一英文低</span></strong></p></li><li><p><a href='https://investea.aca.ntu.edu.tw/secen-waive/OpenTime.asp'><span>免修進階英語課程申請系統&lt;課務組/進修教務組&gt; (上學期的網站，提供大家參考)</span></a></p></li></ul><h4 id='服務學習-0-學分'><span>服務學習 [0 學分]</span></h4><ul><li><p><span>各系會有自己對於服務學習的規定，請</span><strong><span>自行參照各系所的規定</span></strong></p><blockquote><p><strong><span>班森的話：</span></strong>
+<span>奉勸各位一定要聽系辦的話準時交作業！！！！不然服務學習真的會被當......（我就被當了）</span></p></blockquote></li></ul><h4 id='體育-4-學分'><span>體育 [4 學分]</span></h4><ul><li><p><span>活力體適能 1 學分  / 大一上學期的</span><strong><span>必帶課程</span></strong></p></li><li><p><span>專項運動學群 3 學分 / 要自己</span><strong><span>到選課系統填志願</span></strong></p></li></ul><h4 id='國防-0-學分'><span>國防 [0 學分]</span></h4><ul><li><p><span>嚴格來說不算必修，但男生修國防課</span><strong><span>可以折抵兵役</span></strong></p></li><li><p><span>詳細資訊可以閱讀 </span><a href='https://ssc.ntu.edu.tw/nationaldefenseeducation1/Courseinformation#anchorPageTitle'><span>全民國防教育-課程資訊 (ntu.edu.tw)</span></a></p></li></ul><h3 id='名詞索引'><span>名詞索引</span></h3><h4 id='系上課程規定會見到的課程種類'><span>系上課程規定會見到的課程種類</span></h4><ul><li><p><span>共同必修：全校各科系都要修的課程們 —— 包含：國文、外文、體育、通識、服務學習等等</span></p></li><li><p><span>系定必修：系上規定你</span><strong><span>「一定要修」</span></strong><span>的課</span></p></li><li><p><span>系定選修（或專業選修）：系上會提供給你一個</span><strong><span>名單</span></strong><span>，選擇裡面的課</span><strong><span>修滿規定學分</span></strong></p></li><li><p><span>一般選修：可以任意選擇</span><strong><span>各院系的課程</span></strong></p></li></ul><hr /><h4 id='課程網裡面會看到的名詞'><span>課程網裡面會看到的名詞</span></h4><p><mark><span>必帶、必修、選修</span></mark></p><ul><li><p><span>必帶：選課系統</span><strong><span>直接幫你選好</span></strong><span>並且</span><strong><span>帶入到課表</span></strong><span>的課程</span></p></li><li><p><span>必修：雖然屬於必修課程，但還是要</span><strong><span>上網填志願</span></strong></p></li><li><p><span>選修：系上的選修課程，可能會 </span><strong><span>兼通識</span></strong><span>，資訊標註於備註欄</span></p></li></ul><p><mark><span>選課限制</span></mark></p><p><span>不是所有加入課程網的課程都可以加入志願序，舉例來說</span></p><figure><table><thead><tr><th><span>選課限制</span></th><th><span>加入到課程網</span></th><th><span>本系大一生</span></th><th><span>外系大一生</span></th></tr></thead><tbody><tr><td><span>初選不開放</span></td><td><strong><span>O</span></strong></td><td><strong><span>X</span></strong></td><td><strong><span>X</span></strong></td></tr><tr><td><span>限本系所學生 (含輔系、雙修生)</span></td><td><strong><span>O</span></strong></td><td><strong><span>O</span></strong></td><td><strong><span>X</span></strong></td></tr><tr><td><span>限外系（所）學生</span></td><td><strong><span>O</span></strong></td><td><strong><span>X</span></strong></td><td><strong><span>O</span></strong></td></tr><tr><td><span>限學士班三年級以上</span></td><td><strong><span>O</span></strong></td><td><strong><span>X</span></strong></td><td><strong><span>X</span></strong></td></tr><tr><td><span>限本系所學生(含輔系、雙修生), 本校修課人數上限：100 人</span></td><td><strong><span>O</span></strong></td><td><strong><span>O</span></strong></td><td><strong><span>X</span></strong></td></tr><tr><td><span>本校修課人數上限：100 人</span></td><td><strong><span>O</span></strong></td><td><strong><span>O</span></strong></td><td><strong><span>O</span></strong></td></tr><tr><td><span>本校修課人數上限：70人, 外系人數限制：10人</span></td><td><strong><span>O</span></strong></td><td><strong><span>O</span></strong></td><td><strong><span>O</span></strong></td></tr></tbody></table></figure><p><mark><span>[冷知識] 課號、課程識別碼</span></mark></p><ul><li><p><a href='https://nol2.aca.ntu.edu.tw/nol/guest/課程編碼說明.pdf'><span>國立臺灣大學新增「課號」編碼作業說明</span></a></p></li><li><p><span>簡單來說，每一門課都有「課號」跟「課程識別碼」</span></p><ul><li><p><span>課號的編號方式：</span></p></li></ul><p><img src="image-20230808231644962.png" alt="image-20230808231644962" style="zoom:50%;" /></p><ul><li><p><span>識別碼的編號方式：</span></p><p><img src="/Users/bensonchiu/Documents/Documents/bensonstudylife.github.io/2023_course/image-20230808231742945.png" alt="image-20230808231742945" style="zoom: 50%;" /></p></li></ul></li></ul><h3 id='先修科目規定擋修）'><span>先修科目規定（擋修）</span></h3><p><img src="Screen Shot 2023-08-09 at 12.28.50 AM.png" referrerpolicy="no-referrer" alt="Screen Shot 2023-08-09 at 12.28.50 AM"></p><ul><li><p><span>部分系所的課程會設定</span><strong><span>先修科目規定</span></strong><span>，限制同學必須要</span><strong><span>修習完畢指定課程</span></strong><span>並達成</span><strong><span>規定成績</span></strong><span>才能修讀該課</span></p></li><li><p><span>有</span><strong><span>先修科目規定</span></strong><span>的課程，在</span><strong><span>初選第二階段結束後</span></strong><span>會被系統</span><strong><span>擋修</span></strong></p></li><li><p><span>被</span><strong><span>擋修</span></strong><span>的處理方法：</span></p><ul><li><p><span>第一、第三類加選之課程：</span></p><ul><li><p><span>下載並填寫</span><strong><span>「解除擋修申請書」</span></strong><span>經授課教師及開課單位主管簽章同意，在規定期限內送至教務單位</span></p></li></ul></li><li><p><span>第二類加選之課程：</span></p><ul><li><p><span>下載並填寫</span><strong><span>「解除擋修申請書」</span></strong><span>經授課教師及開課單位主管簽章同意，在規定期限內送至教務單位</span></p></li><li><p><span>直接找授課老師索取</span><strong><span>授權碼</span></strong><span>後登記選課</span></p></li></ul></li></ul></li></ul><h2 id='相關網站與實用資源'><span>相關網站與實用資源</span></h2><h3 id='選課規定與相關文件'><span>選課規定與相關文件</span></h3><ul><li><p><span> </span><a href='https://www.aca.ntu.edu.tw/w/aca/UAADForms_21102811111810357'><span>112-1選課專區 - 國立臺灣大學教務處 (ntu.edu.tw)</span></a></p></li></ul><h3 id='選課網站'><span>選課網站</span></h3><ul><li><p><a href='https://nol.ntu.edu.tw/nol/guest/index.php'><span>NTU Online臺大課程網</span></a></p></li><li><p><a href='https://if192.aca.ntu.edu.tw/index.php'><span>臺大選課系統ㄧ</span></a></p></li><li><p><a href='https://if177.aca.ntu.edu.tw/index.php'><span>臺大選課系統二</span></a></p></li></ul><h3 id='課程評價'><span>課程評價</span></h3><ul><li><p><a href='https://rating.myntu.me/'><span>想鑑你 NTU Rating (myntu.me)</span></a></p></li><li><p><a href='https://www.ptt.cc/bbs/NTUcourse/index.html'><span>看板 NTUcourse 文章列表 - 批踢踢實業坊 (ptt.cc)</span></a></p></li><li><p><a href='https://www.facebook.com/groups/581323785380794'><span>台大課程資訊交流區 | Facebook</span></a></p></li></ul><h3 id='學分學程與領域專長'><span>學分學程與領域專長</span></h3><ul><li><p><a href='https://ifsel3.aca.ntu.edu.tw/cou_stu/index.php/cur/cur-list'><span>學分學程簡介與申請系統 (ntu.edu.tw)</span></a></p></li><li><p><a href='https://specom.aca.ntu.edu.tw/'><span>國立台灣大學領域專長 (ntu.edu.tw)</span></a></p></li></ul><hr /><p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /><span>This work is licensed under a </span><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><span>Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</span></a><span>. 本著作係採用</span><a href='http://creativecommons.org/licenses/by-nc-nd/4.0/'><span>創用 CC 姓名標示-非商業性-禁止改作 4.0 國際 授權條款</span></a><span>授權.</span></p><p>&nbsp;</p></div></div>
+
+<script>(function (){var t=document.body.parentElement,e=[],n=null,i=document.body.classList.contains("typora-export-collapse-outline"),r=function(t,e,n){document.addEventListener(t,function(t){if(!t.defaultPrevented)for(var i=t.target;i&&i!=this;i=i.parentNode)if(i.matches(e)){!1===n.call(i,t)&&(t.preventDefault(),t.stopPropagation());break}},!1)};function o(){return t.scrollTop}r("click",".outline-expander",function(t){var e=this.closest(".outline-item-wrapper").classList;return e.contains("outline-item-open")?e.remove("outline-item-open"):e.add("outline-item-open"),c(),!1}),r("click",".outline-item",function(t){var e=this.querySelector(".outline-label");if(location.hash="#"+e.getAttribute("href"),i){var n=this.closest(".outline-item-wrapper").classList;n.contains("outline-item-open")||n.add("outline-item-open"),l(),n.add("outline-item-active")}});var a,s,u=function(){var t=o();n=null;for(var i=0;i<e.length&&e[i][1]-t<60;i++)n=e[i]},l=function(){document.querySelectorAll(".outline-item-active").forEach(t=>t.classList.remove("outline-item-active")),document.querySelectorAll(".outline-item-single.outline-item-open").forEach(t=>t.classList.remove("outline-item-open"))},c=function(){if(n){l();var t=document.querySelector('.outline-label[href="#'+(CSS.escape?CSS.escape(n[0]):n[0])+'"]');if(t)if(i){var e=t.closest(".outline-item-open>ul>.outline-item-wrapper");if(e)e.classList.add("outline-item-active");else{for(var r=(t=t.closest(".outline-item-wrapper")).parentElement.closest(".outline-item-wrapper");r;)r=(t=r).parentElement.closest(".outline-item-wrapper");t.classList.add("outline-item-active")}}else t.closest(".outline-item-wrapper").classList.add("outline-item-active")}};window.addEventListener("scroll",function(t){a&&clearTimeout(a),a=setTimeout(function(){u(),c()},300)});var f=function(){s=setTimeout(function(){!function(){e=[];var t=o();document.querySelector("#write").querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(n=>{var i=n.getAttribute("id");e.push([i,t+n.getBoundingClientRect().y])})}(),u(),c()},300)};window.addEventListener("resize",function(t){s&&clearTimeout(s),f()}),f()})();</script></body>
+</html>
