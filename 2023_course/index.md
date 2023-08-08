@@ -42,7 +42,7 @@
 
 1. 進入[台大課程網](https://nol.ntu.edu.tw/nol/guest/index.php)，並且**登入計中帳號**
 
-<img src="/Users/bensonchiu/Documents/Documents/bensonstudylife.github.io/2023_course/Screen Shot 2023-08-08 at 9.59.16 PM.png" alt="Screen Shot 2023-08-08 at 9.59.16 PM" style="zoom: 50%;" />
+<img src="nol1.png" alt="Screen Shot 2023-08-08 at 9.59.16 PM" style="zoom: 50%;" />
 
 2. 詳細閱讀**系所課程規定**
 
@@ -68,7 +68,7 @@
 
 5. 點擊課程網左側的**「預計要選的課」**
 
-   <img src="/Users/bensonchiu/Documents/Documents/bensonstudylife.github.io/2023_course/Screen Shot 2023-08-08 at 10.11.47 PM.png" alt="Screen Shot 2023-08-08 at 10.11.47 PM" style="zoom: 50%;" />
+   <img src="nol2.png" alt="Screen Shot 2023-08-08 at 10.11.47 PM" style="zoom: 50%;" />
 
 ​		便可查看**「我預計要選的課程列表」**
 
@@ -349,7 +349,7 @@
 
   - 識別碼的編號方式：
 
-    <img src="/Users/bensonchiu/Documents/Documents/bensonstudylife.github.io/2023_course/image-20230808231742945.png" alt="image-20230808231742945" style="zoom: 50%;" />
+    <img src="image-20230808231742945.png" alt="image-20230808231742945" style="zoom: 50%;" />
 
 ### 先修科目規定（擋修）
 
